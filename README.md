@@ -222,10 +222,12 @@ Employee Id ser habilitado para alterações dado que o campo ID de usuário, po
 ## 🔧 Sugestões de Melhoria
 
 ### 📌 Mudanças de Estilização durante o dia da aplicação
-- Em muitos momentos vi que houveram mudanças do estilos de cores da aplicação, mas geraram em algumas situação uma dificuldade de visualizar alguns botões, entendimentos de textos e ações, justamente pelo texto não ser ajustado junto com o bg dos botões ou background de funções.
+- As constantes mudanças, ao logo do dia, nas cores da aplicação prejudicaram a legibilidade. Em alguns casos, a falta de contraste entre a cor do texto e os novos fundos (backgrounds) dificultou a visualização de botões e o entendimento das ações.
 
 ### 📌 Tooltip Nas ações
-- Sugestão de Melhoria é aplicação de Tooltips nas ações tanto de Edição como Remoção de empregado
+- Aplicação de Tooltips nas ações tanto de Edição como Remoção de empregados
+
+### 📌 Aplicação de conceitos de Narrador
 - Aplicação propriedade de leitura para que o narrador possa ler corretamente os campos e dar a informação correta.
 
 ## 📄 Considerações Finais
