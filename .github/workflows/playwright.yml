@@ -1,0 +1,51 @@
+name: Automação de Testes - Playwright & Cucumber
+
+# 1. Gatilhos de Execução
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch: # Adiciona um botão no GitHub para rodar manualmente quando quiser
+
+jobs:
+  testes-e2e:
+    name: Execução de Testes E2E
+    timeout-minutes: 60
+    runs-on: ubuntu-latest # Máquina virtual Linux (mais rápida e barata em CI)
+
+    steps:
+    - name: 📥 Obter o código do repositório
+      uses: actions/checkout@v4
+
+    - name: ⚙️ Configurar Node.js (v20)
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'npm' # Habilita o cache das dependências para acelerar futuras execuções
+
+    - name: 📦 Instalar dependências do projeto (npm install)
+      run: npm ci # 'ci' é mais seguro e limpo que 'install' em ambientes automatizados
+
+    - name: 🌐 Instalar navegadores do Playwright e dependências do Linux
+      # Como seu hooks.js usa chromium.launch(), instalamos apenas o Chromium para poupar tempo
+      run: npx playwright install --with-deps chromium 
+
+    - name: 🔐 Configurar Variáveis de Ambiente (.env)
+      # Aqui injetamos as credenciais seguras do GitHub Secrets para dentro da máquina virtual
+      run: |
+        echo "ADMIN_USERNAME=${{ secrets.ADMIN_USERNAME }}" >> .env
+        echo "ADMIN_PASSWORD=${{ secrets.ADMIN_PASSWORD }}" >> .env
+        # Se houver outras variáveis no seu .env local (ex: BASE_URL), adicione-as aqui
+
+    - name: 🚀 Executar os Testes (Cucumber)
+      run: npm test
+
+    - name: 📊 Salvar Relatório HTML, Vídeos e Screenshots
+      if: always() # O always() é CRÍTICO: garante que salvará as evidências mesmo se o teste quebrar
+      uses: actions/upload-artifact@v4
+      with:
+        name: relatorio-de-execucao
+        # Aponta para a pasta onde o HTML, os vídeos e screenshots estão sendo salvos
+        path: reports/
+        retention-days: 15 # Tempo que os arquivos ficarão disponíveis para download no GitHub
