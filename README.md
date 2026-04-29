@@ -66,42 +66,42 @@ npm test -> (package.json)
 
 ### 🔹 Cenários de Autenticação de usuário
 
-Cenário de Login com Sucesso
+**Cenário de Login com Sucesso**
 
-Pré requisitos
+**Pré requisitos**
 - aplicação disponível no ambiente de testes
 
-Cenário
+**Cenário**
 - Dado que a home page esteja disponível
 - Quanto o preenchimento correto dos campos username e password for efetuada
 - Então a pagina de admin com Login será apresentada corretamente
 
-Cenário de Login com Erro do campo Username
+**Cenário de Login com Erro do campo Username**
 
-Pré requisitos
+**Pré requisitos**
 - aplicação disponível no ambiente de testes
 
-Cenário
+**Cenário**
 - Dado que a home page esteja disponível
 - Quanto o preenchimento correto do campo password e com incorreto no campo Username for efetuada 
 - Então a mensagem de erro 'Invalid credentials' será exibida
 
-Cenário de Login com Erro do campo password
+**Cenário de Login com Erro do campo password**
 
-Pré requisitos
+**Pré requisitos**
 - aplicação disponível no ambiente de testes
 
-Cenário
+**Cenário**
 - Dado que a home page esteja disponível
 - Quanto o preenchimento incorreto do campo password e correto no campo Username for efetuada 
 - Então a mensagem de erro 'Invalid credentials' será exibida
 
-Cenário de Login com Erro do campo Vazios
+**Cenário de Login com Erro do campo Vazios**
 
-Pré requisitos
+**Pré requisitos**
 - aplicação disponível no ambiente de testes
 
-Cenário
+**Cenário**
 - Dado que a home page esteja disponível
 - Quanto o preenchimento dos campos username e password for vazio
 - Então a mensagem de alerta com a mensagem 'Required' será exibida
@@ -109,44 +109,44 @@ Cenário
 
 ### 🔹 Cenários de gestão de funcionários
 
-Cadastro de novo Empregado
+**Cadastro de novo Empregado**
 
-Pré requisitos
+**Pré requisitos**
 - aplicação disponível no ambiente de testes
 
-Cenário
+**Cenário**
 - Dado que o admin home page esteja disponível
 - Quanto a opção 'Add employee' é selecionada no menu PIM
 - Então o cadastro um usuário é feito com sucesso
 
-Edição de dados cadastrais do usuário
+**Edição de dados cadastrais do usuário**
 
-Pré requisitos
+**Pré requisitos**
 - aplicação disponível no ambiente de testes
 
-Cenário
+**Cenário**
 - Dado que o admin home page esteja disponível
 - Quanto a opção 'Employee List' é selecionada no menu PIM
 - Então é possível pesquisar um usuário pelo nome
 - E editar seus dados cadastrais atravez da ação Editar
 
-Exclusão de Usuário Cadastrado
+**Exclusão de Usuário Cadastrado**
 
-Pré requisitos
+**Pré requisitos**
 - aplicação disponível no ambiente de testes
 
-Cenário
+**Cenário**
 - Dado que o admin home page esteja disponível
 - Quanto a opção 'Employee List' é selecionada no menu PIM
 - Então é possível pesquisar um usuário pelo nome
 - E excluir seus dados atravez da ação Remover
 
-Cadastro de usuário validando campos Obrigatórios
+**Cadastro de usuário validando campos Obrigatórios**
 
-Pré requisitos
+**Pré requisitos**
 - aplicação disponível no ambiente de testes
 
-Cenário
+**Cenário**
 - Dado que o admin home page esteja disponível
 - Quanto a opção 'Add employee' é selecionada no menu PIM
 - Então verificar os campos obrigatórios "Campos" no formulario com a opçção 'Create Login Details' desabilitada
@@ -155,13 +155,12 @@ Cenário
 |First Name |  
 |Last Name  |  
 
+**Cadastro de usuário validando campos Obrigatórios com detalhes de login**
 
-Cadastro de usuário validando campos Obrigatórios com detalhes de login
-
-Pré requisitos
+**Pré requisitos**
 - aplicação disponível no ambiente de testes
 
-Cenário
+**Cenário**
 - Dado que o admin home page esteja disponível
 - Quanto a opção "Add employee" é selecionada no menu PIM
 - Então verificar os campos obrigatórios "Campos" no formulario com a opção 'Create Login Details' habilitada
@@ -176,13 +175,13 @@ Cenário
 
 ### 🔹 Busca e Filtros
 
-Cenário de busca de empregado por nome
+**Cenário de busca de empregado por nome**
 
-Pré requisitos
+**Pré requisitos**
 - aplicação disponível no ambiente de testes
 - Usuário Cadastrados Previamente
 
-Cenário
+**Cenário**
 - Dado que o admin home page esteja disponível
 - Quanto a opção "Employee List" é selecionada no menu PIM
 - Então é possível pesquisar o funcionario pelo nome
@@ -236,7 +235,7 @@ Employee Id ser habilitado para alterações dado que o campo ID de usuário, po
 ### 📌 Mudanças de Estilização durante o dia da aplicação
 - Em muitos momentos vi que houveram mudanças do estilos de cores da aplicação, mas geraram em algumas situação uma dificuldade de visualizar alguns botões, entendimentos de textos e ações, justamente pelo texto não ser ajustado junto com o bg dos botões ou background de funções.
 
-### 📝 Tooltip Nas ações
+### 📌 Tooltip Nas ações
 - Sugestão de Melhoria é aplicação de Tooltips nas ações tanto de Edição como Remoção de empregado
 - Aplicação propriedade de leitura para que o narrador possa ler corretamente os campos e dar a informação correta.
 
