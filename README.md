@@ -14,25 +14,25 @@ Este documento contém a descrição do projeto de automação de testes para SI
 
 ## 📌 Estrutura de projeto
 
-- /reports  
+- **/reports**  
 Repositório onde serão guardadas as evidências caso algum cenário tenha falha
 
-- tests/actions  
+- **tests/actions**  
 Pasta onde está guardadas todos métodos resposáveis pelas ações realizadas entro do sistema
 
-- tests/componets  
+- **tests/componets**  
 Pasta onde está guardadas as informações dos componentes a serem utilizados nas ações(actions)
 
-- tests/features  
+- **tests/features**  
 Pasta onde está guardada os cenários em Gherkin
 
-- tests/step_definitions  
+- **tests/step_definitions**  
 Pasta onde está guardada os step definidos pelas features
 
-- .env  
+- **.env**  
 arquivo de configuração de variáveis globais.
 
-- cucumber.json  
+- **cucumber.json**  
 arquivo onde estão dos diretórios de testes
 
 ---
