@@ -37,7 +37,7 @@ arquivo onde estão dos diretórios de testes
 
 ---
 
-## 🚀 Planejamento de execução dos testes
+## 🚀 Ferramentas para execução dos testes automatizados
 
 ### Pré-requisitos
 
