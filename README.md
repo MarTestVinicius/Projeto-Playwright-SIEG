@@ -1,4 +1,4 @@
-# Automação de Testes
+# Projeto Automação de Testes OrangeHRM
 
 Este documento contém a descrição do projeto de automação de testes para SIEG, cobrindo testes de Interface E2E do sistema OrangeHRM
 
