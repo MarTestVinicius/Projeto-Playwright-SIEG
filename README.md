@@ -37,7 +37,7 @@ arquivo onde estão dos diretórios de testes
 
 ---
 
-## 🚀 Planejamento de executar dos testes
+## 🚀 Planejamento de execução dos testes
 
 ### Pré-requisitos
 
