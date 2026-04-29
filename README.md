@@ -6,20 +6,45 @@ Este documento contém a descrição do projeto de automação de testes para SI
 
 ## 📌 Tecnologias Utilizadas
 
-- Node.js
-- Playwright
-- cucumber
+- Node.js 22.14
+- Playwright 
+- Cucumber
 
 ---
 
-## 🚀 Como Executar os Testes
+## 📌 Estrutura de projeto
+
+- /reports
+Repositório onde serão guardadas as evidências caso algum cenário tenha falha
+
+- tests/actions
+Pasta onde está guardadas todos métodos resposáveis pelas ações realizadas entro do sistema
+
+- tests/componets
+Pasta onde está guardadas as informações dos componentes a serem utilizados nas ações(actions)
+
+- tests/features
+Pasta onde está guardada os cenários em Gherkin
+
+- tests/step_definitions
+Pasta onde está guardada os step definidos pelas features
+
+- .env
+arquivo de configuração de variáveis globais.
+
+- cucumber.json
+arquivo onde estão dos diretórios de testes
+
+---
+
+## 🚀 Planejamento de executar dos testes
 
 ### Pré-requisitos
 
 - Node.js instalado
 - Playwright instalado
-- cucumber instalado
-- extensão cucumber
+- Cucumber instalado
+- Extensão Cucumber
 
 ### Instalação
 
@@ -78,8 +103,8 @@ Pré requisitos
 
 Cenário
 - Dado que a home page esteja disponível
-- Quanto o preenchimento dos campos username e passador for vazio
-- Então mensagem de alerta com a mensagem 'Required' será exibida
+- Quanto o preenchimento dos campos username e password for vazio
+- Então a mensagem de alerta com a mensagem 'Required' será exibida
 
 
 ### 🔹 Cenários de gestão de funcionários
@@ -127,8 +152,8 @@ Cenário
 - Então verificar os campos obrigatórios "Campos" no formulario com a opçção 'Create Login Details' desabilitada
 
 |Campos     |
-|First name |
-|Last name  |
+|First Name |
+|Last Name  |
 
 
 Cadastro de usuário validando campos Obrigatórios com detalhes de login
@@ -139,7 +164,7 @@ Pré requisitos
 Cenário
 - Dado que o admin home page esteja disponível
 - Quanto a opção "Add employee" é selecionada no menu PIM
-- Então verificar os campos obrigatórios "Campos" no formulario com a opçção 'Create Login Details' habilitada
+- Então verificar os campos obrigatórios "Campos" no formulario com a opção 'Create Login Details' habilitada
 
 |Campos           |
 |First name       |
@@ -167,10 +192,10 @@ Cenário
 
 ## 🐞 Bugs Encontrados
 
-### Bug 1: Validação de data obrigatória
+### Bug 1: Ceário de Exclusão de Empregado
 
 **Descrição:** 
-No cenário de Exclusão de Empregado, o Toast Mensage aparece duas vezes, um mostrado que o usuário foi removido e outro que não existe itens na pesquisa.
+No cenário de Exclusão de Empregado, o Toast Mensage aparece duas vezes, um mostrando que o usuário foi removido e outro que não existe itens na pesquisa.
 
 
 **Passos:**
@@ -180,10 +205,10 @@ No cenário de Exclusão de Empregado, o Toast Mensage aparece duas vezes, um mo
 4. Clicar na ação de Exclusão ou pelo Checkbox ou botão de ação de remoção
 
 **Esperado:**  
-* A mensagem de possívelmente de  "Remoção realizada com Sucesso" com toast com um texto mais adequado ou com um comportamento do componente diferente
+* A mensagem, "Remoção realizada com Sucesso", com toast com um texto mais adequado ou com um comportamento do componente diferente
 
 **Atual:**
-* Aparece dois toast mensage um que fala que removeu com Sucesso e mediatamente outro que não tem ninguém na lista, ( isso prejudica a avalição de automação que a mensagem não conseguiria a mensagem de sucesso, justamente por ser muito rápido a informação).
+* Aparece dois toast mensage um que fala que removeu com Sucesso e mediatamente outro que não tem ninguém na lista.
 
 ---
 
@@ -202,7 +227,7 @@ Employee Id ser habilitado para alterações dado que o campo ID de usuário, po
 * Como o esperado que o Campo ID seja Sempre Único para o usuário, não haveria necessidade de haver alteração do mesmo e até mesmo esse campo ser apresentado, ficando disponível no banco de dados.
 
 **Atual:**  
-* O campo Employee Id não teria, a princípio necessidade de estar disponível ao usuário para remoção, ficando disponível somente em banco de dados.
+* O campo Employee Id não teria, a princípio, necessidade de estar disponível ao usuário para remoção, ficando disponível somente a informação em banco de dados.
 
 ---
 
@@ -212,7 +237,8 @@ Employee Id ser habilitado para alterações dado que o campo ID de usuário, po
 - Em muitos momentos vi que houveram mudanças do estilos de cores da aplicação, mas geraram em algumas situação uma dificuldade de visualizar alguns botões, entendimentos de textos e ações, justamente pelo texto não ser ajustado junto com o bg dos botões ou background de funções.
 
 ### 📝 Tooltip Nas ações
-- Sugestão de Melhoria é aplicação de Tooltips nas ações tanto de Edição como Remoção de empregado, bem como aplicação propriedade de leitura para que o narrador possa ler corretamente os campos e dar a informação correta.
+- Sugestão de Melhoria é aplicação de Tooltips nas ações tanto de Edição como Remoção de empregado
+- Aplicação propriedade de leitura para que o narrador possa ler corretamente os campos e dar a informação correta.
 
 ## 📄 Considerações Finais
 
