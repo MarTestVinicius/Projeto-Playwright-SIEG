@@ -1,6 +1,6 @@
 # Projeto Automação de Testes OrangeHRM
 
-Este documento contém a descrição do projeto de automação de testes para SIEG, cobrindo testes de Interface E2E do sistema OrangeHRM
+Este documento contém a descrição do projeto de automação de testes para SIEG, cobrindo testes de Interface E2E do sistema OrangeHRM, projeto esse voltado para vaga de trabalho.
 
 ---
 
@@ -12,21 +12,21 @@ Este documento contém a descrição do projeto de automação de testes para SI
 
 ---
 
-## 📌 Estrutura de projeto
+## 📂 Estrutura de projeto
 
-- **/reports**  
-Repositório onde serão guardadas as evidências caso algum cenário tenha falha
+- 📊 **/reports**  
+Repositório onde serão guardadas as evidências caso algum cenário tenha falha como também o relatório final da execução.
 
-- **tests/actions**  
+- 📂**tests/actions**  
 Pasta onde está guardadas todos métodos resposáveis pelas ações realizadas entro do sistema
 
-- **tests/componets**  
+- 📂**tests/componets**  
 Pasta onde está guardadas as informações dos componentes a serem utilizados nas ações(actions)
 
-- **tests/features**  
+- 📂**tests/features**  
 Pasta onde está guardada os cenários em Gherkin
 
-- **tests/step_definitions**  
+- 📂**tests/step_definitions**  
 Pasta onde está guardada os step definidos pelas features
 
 - **.env**  
