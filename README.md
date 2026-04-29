@@ -14,25 +14,25 @@ Este documento contém a descrição do projeto de automação de testes para SI
 
 ## 📌 Estrutura de projeto
 
-- /reports
+- /reports  
 Repositório onde serão guardadas as evidências caso algum cenário tenha falha
 
-- tests/actions
+- tests/actions  
 Pasta onde está guardadas todos métodos resposáveis pelas ações realizadas entro do sistema
 
-- tests/componets
+- tests/componets  
 Pasta onde está guardadas as informações dos componentes a serem utilizados nas ações(actions)
 
-- tests/features
+- tests/features  
 Pasta onde está guardada os cenários em Gherkin
 
-- tests/step_definitions
+- tests/step_definitions  
 Pasta onde está guardada os step definidos pelas features
 
-- .env
+- .env  
 arquivo de configuração de variáveis globais.
 
-- cucumber.json
+- cucumber.json  
 arquivo onde estão dos diretórios de testes
 
 ---
@@ -151,9 +151,9 @@ Cenário
 - Quanto a opção 'Add employee' é selecionada no menu PIM
 - Então verificar os campos obrigatórios "Campos" no formulario com a opçção 'Create Login Details' desabilitada
 
-|Campos     |
-|First Name |
-|Last Name  |
+|Campos     |  
+|First Name |  
+|Last Name  |  
 
 
 Cadastro de usuário validando campos Obrigatórios com detalhes de login
@@ -166,12 +166,12 @@ Cenário
 - Quanto a opção "Add employee" é selecionada no menu PIM
 - Então verificar os campos obrigatórios "Campos" no formulario com a opção 'Create Login Details' habilitada
 
-|Campos           |
-|First name       |
-|Last name        |
-|Username         |
-|Password         |
-|Confirm Password |
+|Campos           |  
+|First name       |  
+|Last name        |  
+|Username         |  
+|Password         |  
+|Confirm Password |  
 
 
 ### 🔹 Busca e Filtros
