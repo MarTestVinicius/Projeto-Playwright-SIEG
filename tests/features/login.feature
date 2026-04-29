@@ -1,9 +1,9 @@
 Feature: Login
 
- Scenario: login admin com Sucesso
+ Scenario: Cenário de Login com Sucesso
  Given que a home page esteja disponível
  When o preenchimento correto dos campos username e password for efetuada 
- Then a pagina de admin com Login será apresentada corretamente
+ Then o Login admin será efetuado corretamente
 
  Scenario: Cenário de Login com Erro do campo Username
  Given que a home page esteja disponível

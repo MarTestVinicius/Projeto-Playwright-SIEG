@@ -14,7 +14,7 @@ When('a opção Employee List é selecionada no menu PIM', async function(){
     await gestaoFuncionarioActions.IrOpcaoPIM();
 })
 
-Then('é possível pesquisar o funcionario pelo nome', async function () {
+Then('pesquisar o funcionario pelo nome', async function () {
    await buscaEFiltrosFuncionariosActions.VerificarEmployeeListEstaAberto(employeeListTitle);
    await buscaEFiltrosFuncionariosActions.PreencherNomePesquisaEmployee(process.env.BASE_FIRST_NAME);
    await buscaEFiltrosFuncionariosActions.SubmitSearch();

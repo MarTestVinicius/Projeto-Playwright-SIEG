@@ -74,7 +74,7 @@ npm test -> (package.json)
 **Cenário**
 - Dado que a home page esteja disponível
 - Quanto o preenchimento correto dos campos username e password for efetuada
-- Então a pagina de admin com Login será apresentada corretamente
+- Então o Login admin será efetuado corretamente
 
 **Cenário de Login com Erro do campo Username**
 
@@ -116,7 +116,7 @@ npm test -> (package.json)
 
 **Cenário**
 - Dado que o admin home page esteja disponível
-- Quanto a opção 'Add employee' é selecionada no menu PIM
+- Quanto a opção Add employee é selecionada no menu PIM
 - Então o cadastro um usuário é feito com sucesso
 
 **Edição de dados cadastrais do usuário**
@@ -126,7 +126,7 @@ npm test -> (package.json)
 
 **Cenário**
 - Dado que o admin home page esteja disponível
-- Quanto a opção 'Employee List' é selecionada no menu PIM
+- Quanto a opção Employee List é selecionada no menu PIM
 - Então é possível pesquisar um usuário pelo nome
 - E editar seus dados cadastrais atravez da ação Editar
 
@@ -137,7 +137,7 @@ npm test -> (package.json)
 
 **Cenário**
 - Dado que o admin home page esteja disponível
-- Quanto a opção 'Employee List' é selecionada no menu PIM
+- Quanto a opção Employee List é selecionada no menu PIM
 - Então é possível pesquisar um usuário pelo nome
 - E excluir seus dados atravez da ação Remover
 
@@ -148,12 +148,8 @@ npm test -> (package.json)
 
 **Cenário**
 - Dado que o admin home page esteja disponível
-- Quanto a opção 'Add employee' é selecionada no menu PIM
-- Então verificar os campos obrigatórios "Campos" no formulario com a opçção 'Create Login Details' desabilitada
-
-|Campos     |  
-|First Name |  
-|Last Name  |  
+- Quanto a opção Add employee é selecionada no menu PIM
+- Então verificar os campos obrigatórios no formulario com a opçção 'Create Login Details' desabilitada
 
 **Cadastro de usuário validando campos Obrigatórios com detalhes de login**
 
@@ -162,15 +158,8 @@ npm test -> (package.json)
 
 **Cenário**
 - Dado que o admin home page esteja disponível
-- Quanto a opção "Add employee" é selecionada no menu PIM
-- Então verificar os campos obrigatórios "Campos" no formulario com a opção 'Create Login Details' habilitada
-
-|Campos           |  
-|First name       |  
-|Last name        |  
-|Username         |  
-|Password         |  
-|Confirm Password |  
+- Quanto a opção Add employee é selecionada no menu PIM
+- Então verificar os campos obrigatórios no formulario com a opção 'Create Login Details' habilitada
 
 
 ### 🔹 Busca e Filtros
@@ -184,7 +173,7 @@ npm test -> (package.json)
 **Cenário**
 - Dado que o admin home page esteja disponível
 - Quanto a opção "Employee List" é selecionada no menu PIM
-- Então é possível pesquisar o funcionario pelo nome
+- Então pesquisar o funcionario pelo nome
 - E vericar o resultado da pesquisa no campo Records Found
 
 ---

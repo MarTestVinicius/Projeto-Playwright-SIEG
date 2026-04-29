@@ -25,7 +25,7 @@ When('o preenchimento dos campos username e passador for vazio', async function 
  await loginActions.SubmitFormularioAdmin('','');
 });
 
- Then('a pagina de admin com Login será apresentada corretamente',async function () {
+ Then('o Login admin será efetuado corretamente',async function () {
    await loginActions.ValidarLoginSucesso();
 }); 
 
