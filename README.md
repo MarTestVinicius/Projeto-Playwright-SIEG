@@ -42,15 +42,12 @@ Arquivo onde contem os diretórios de testes.
 ### Pré-requisitos
 
 - Node.js instalado
-- Playwright instalado
-- Cucumber instalado
-- Extensão Cucumber
+- Extensão Cucumber para o VS CODE
 
-### Instalação
+### Clone de projeto
 
 ```bash
-npm init playwright@latest (Playwright)
-npm install --save-dev @cucumber/cucumber (Cucumber)
+git clone git@github.com:MarTestVinicius/Projeto-Playwright-SIEG.git
 ```
 
 ### Execução dos testes
