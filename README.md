@@ -66,12 +66,12 @@ npm test -> (package.json)
 
 ### 🔹 Cenários de Autenticação de usuário
 
-  **Cenário de Login com Sucesso**
+**Cenário de Login com Sucesso**
 
-  **Pré requisitos**
+*Pré requisitos*
 - aplicação disponível no ambiente de testes
 
-  **Cenário**
+*Cenário*
 - Dado que a home page esteja disponível
 - Quanto o preenchimento correto dos campos username e password for efetuada
 - Então o Login admin será efetuado corretamente
