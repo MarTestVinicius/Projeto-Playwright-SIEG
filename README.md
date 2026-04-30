@@ -1,6 +1,6 @@
 # Projeto Automação de Testes OrangeHRM
 
-Este documento contém a descrição do projeto de automação de testes para SIEG, cobrindo testes de Interface E2E do sistema OrangeHRM, projeto esse voltado para vaga de trabalho.
+“Este documento apresenta um projeto de automação de testes, com foco em testes de interface no sistema OrangeHRM, desenvolvido para um processo seletivo da empresa SIEG.”
 
 ---
 
@@ -15,25 +15,25 @@ Este documento contém a descrição do projeto de automação de testes para SI
 ## 📂 Estrutura de projeto
 
 - 📊 **/reports**  
-Repositório onde serão guardadas as evidências caso algum cenário tenha falha como também o relatório final da execução.
+Repositório onde serão guardadas as evidências caso algum cenário tenha falha e relatório final da execução.
 
 - 📂**tests/actions**  
-Pasta onde está guardadas todos métodos resposáveis pelas ações realizadas entro do sistema
+Pasta onde contem todos métodos resposáveis pelas ações realizadas dentro do projeto.
 
 - 📂**tests/componets**  
-Pasta onde está guardadas as informações dos componentes a serem utilizados nas ações(actions)
+Pasta onde contem as informações dos componentes a serem utilizados nas ações(actions).
 
 - 📂**tests/features**  
-Pasta onde está guardada os cenários em Gherkin
+Pasta onde contem os cenários em Gherkin.
 
 - 📂**tests/step_definitions**  
-Pasta onde está guardada os step definidos pelas features
+Pasta onde contem as definições de passo-a-passo informadas pelas features.
 
 - **.env**  
-arquivo de configuração de variáveis globais.
+Arquivo de configuração de variáveis globais.
 
 - **cucumber.json**  
-arquivo onde estão dos diretórios de testes
+Arquivo onde contem os diretórios de testes.
 
 ---
 
@@ -49,8 +49,8 @@ arquivo onde estão dos diretórios de testes
 ### Instalação
 
 ```bash
-npm init playwright@latest
-npm install --save-dev @cucumber/cucumber
+npm init playwright@latest (Playwright)
+npm install --save-dev @cucumber/cucumber (Cucumber)
 ```
 
 ### Execução dos testes
@@ -66,12 +66,12 @@ npm test -> (package.json)
 
 ### 🔹 Cenários de Autenticação de usuário
 
-**Cenário de Login com Sucesso**
+  **Cenário de Login com Sucesso**
 
-**Pré requisitos**
+  **Pré requisitos**
 - aplicação disponível no ambiente de testes
 
-**Cenário**
+  **Cenário**
 - Dado que a home page esteja disponível
 - Quanto o preenchimento correto dos campos username e password for efetuada
 - Então o Login admin será efetuado corretamente
