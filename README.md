@@ -1,6 +1,6 @@
 # Projeto Automação de Testes OrangeHRM
 
-“Este documento apresenta um projeto de automação de testes, com foco em testes de interface no sistema OrangeHRM, desenvolvido para um processo seletivo da empresa SIEG.”
+Este documento apresenta um projeto de automação de testes, com foco em testes de interface no sistema OrangeHRM, desenvolvido para um processo seletivo da empresa SIEG.
 
 ---
 

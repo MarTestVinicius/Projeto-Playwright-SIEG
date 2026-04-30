@@ -13,11 +13,11 @@ When('o preenchimento correto dos campos username e password for efetuada', asyn
  await loginActions.SubmitFormularioAdmin('admin', 'admin123');
 });
 
- When('o preenchimento incorreto do campo password e correto no campo Username for efetuada', async function () {
+When('o preenchimento incorreto do campo password e correto no campo Username for efetuada', async function () {
  await loginActions.SubmitFormularioAdmin('admin', 'admin123456');
 });
 
-When('o preenchimento correto do campo password e com incorreto no campo Username for efetuada', async function () { 
+When('o preenchimento correto do campo password e incorreto no campo Username for efetuada', async function () { 
  await loginActions.SubmitFormularioAdmin('admin456', 'admin123');
 });
 
