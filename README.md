@@ -231,7 +231,7 @@ O campo "Employee Id" atualmente está habilitado para alterações no momomento
 4. com a ação editar realida, validar o campo Employee Id
 
 **Esperado:**  
-* O Campo Employee ID deve sempre ser único e não editável para cada usuário, ficando apenas armazenado no banco de dados.
+* O Campo Employee ID deve sempre ser único e não editável para cada usuário, ficando armazenado sempre no banco de dados ou visível, porém, não possível de alteração na aplicação.
 
 **Atual:**  
 * O campo Employee Id é apresentado na tela de edição e criação de um empregado sendo possível alterar o campo de maneira livre.
