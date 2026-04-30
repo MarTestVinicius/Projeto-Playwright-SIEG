@@ -7,7 +7,7 @@ Feature: Login
 
  Scenario: Cenário de Login com Erro do campo Username
  Given que a home page esteja disponível
- When o preenchimento correto do campo password e com incorreto no campo Username for efetuada 
+ When o preenchimento correto do campo password e incorreto no campo Username for efetuada 
  Then a mensagem de erro "Invalid credentials" será exibida
 
  Scenario: Cenário de Login com Erro do campo password

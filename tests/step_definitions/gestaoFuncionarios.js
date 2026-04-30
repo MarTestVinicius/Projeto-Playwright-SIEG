@@ -27,7 +27,7 @@ Then('o cadastro de um novo empregado é feito com sucesso', async function () {
       await gestaoFuncionarioActions.ValidarToastNovoFuncionarioSucesso();
 });
 
-Then('verificar os campos obrigatórios Campos no formulario com a opçção Create Login Details desabilitada', async function () {
+Then('verificar os campos obrigatórios Campos no formulario com a opção Create Login Details desabilitada', async function () {
       await gestaoFuncionarioActions.SubmeterFormularioNovoFuncionario();
       await gestaoFuncionarioActions.ValidarCamposObrigatoriosNovoFuncionario(alertmessage3,alertmessage)
 });

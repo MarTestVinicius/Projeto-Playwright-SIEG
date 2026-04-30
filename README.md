@@ -66,40 +66,46 @@ npm test -> (package.json)
 
 ### 🔹 Cenários de Autenticação de usuário
 
-**Cenário de Login com Sucesso**
+**1. Cenário de Login com Sucesso**
 
-*Pré requisitos*
-- aplicação disponível no ambiente de testes
+**Pré requisitos**
+- Aplicação deve estar disponível no ambiente de testes
 
-*Cenário*
+**Cenário**
 - Dado que a home page esteja disponível
 - Quanto o preenchimento correto dos campos username e password for efetuada
 - Então o Login admin será efetuado corretamente
 
-**Cenário de Login com Erro do campo Username**
+
+
+**2. Cenário de Login com Erro do campo Username**
 
 **Pré requisitos**
-- aplicação disponível no ambiente de testes
+- Aplicação deve estar disponível no ambiente de testes
 
 **Cenário**
 - Dado que a home page esteja disponível
-- Quanto o preenchimento correto do campo password e com incorreto no campo Username for efetuada 
+- Quanto o preenchimento correto do campo password e incorreto no campo Username for efetuada 
 - Então a mensagem de erro 'Invalid credentials' será exibida
 
-**Cenário de Login com Erro do campo password**
+
+
+**3. Cenário de Login com Erro do campo password**
 
 **Pré requisitos**
-- aplicação disponível no ambiente de testes
+- Aplicação deve estar disponível no ambiente de testes
 
 **Cenário**
 - Dado que a home page esteja disponível
 - Quanto o preenchimento incorreto do campo password e correto no campo Username for efetuada 
 - Então a mensagem de erro 'Invalid credentials' será exibida
 
-**Cenário de Login com Erro do campo Vazios**
+
+
+**4. Cenário de Login com Erro do campo Vazios**
 
 **Pré requisitos**
-- aplicação disponível no ambiente de testes
+- Aplicação deve estar disponível no ambiente de testes
 
 **Cenário**
 - Dado que a home page esteja disponível
@@ -107,54 +113,63 @@ npm test -> (package.json)
 - Então a mensagem de alerta com a mensagem 'Required' será exibida
 
 
+
 ### 🔹 Cenários de gestão de funcionários
 
-**Cadastro de novo Empregado**
+**1. Cadastro de novo Empregado**
 
 **Pré requisitos**
-- aplicação disponível no ambiente de testes
+- Aplicação deve estar disponível no ambiente de testes
 
 **Cenário**
 - Dado que o admin home page esteja disponível
 - Quanto a opção Add employee é selecionada no menu PIM
 - Então o cadastro um usuário é feito com sucesso
 
-**Edição de dados cadastrais do usuário**
+
+
+**2. Edição de dados cadastrais do usuário**
 
 **Pré requisitos**
-- aplicação disponível no ambiente de testes
+- Aplicação deve estar disponível no ambiente de testes
 
 **Cenário**
 - Dado que o admin home page esteja disponível
 - Quanto a opção Employee List é selecionada no menu PIM
 - Então é possível pesquisar um usuário pelo nome
-- E editar seus dados cadastrais atravez da ação Editar
+- E editar seus dados cadastrais através da ação Editar
 
-**Exclusão de Usuário Cadastrado**
+
+
+**3. Exclusão de Usuário Cadastrado**
 
 **Pré requisitos**
-- aplicação disponível no ambiente de testes
+- Aplicação deve estar disponível no ambiente de testes
 
 **Cenário**
 - Dado que o admin home page esteja disponível
 - Quanto a opção Employee List é selecionada no menu PIM
 - Então é possível pesquisar um usuário pelo nome
-- E excluir seus dados atravez da ação Remover
+- E excluir seus dados através da ação Remover
 
-**Cadastro de usuário validando campos Obrigatórios**
+
+
+**4. Cadastro de usuário validando campos Obrigatórios**
 
 **Pré requisitos**
-- aplicação disponível no ambiente de testes
+- Aplicação deve estar disponível no ambiente de testes
 
 **Cenário**
 - Dado que o admin home page esteja disponível
 - Quanto a opção Add employee é selecionada no menu PIM
-- Então verificar os campos obrigatórios no formulario com a opçção 'Create Login Details' desabilitada
+- Então verificar os campos obrigatórios no formulário com a opção 'Create Login Details' desabilitada
 
-**Cadastro de usuário validando campos Obrigatórios com detalhes de login**
+
+
+**5. Cadastro de usuário validando campos Obrigatórios com detalhes de login**
 
 **Pré requisitos**
-- aplicação disponível no ambiente de testes
+- Aplicação deve estar disponível no ambiente de testes
 
 **Cenário**
 - Dado que o admin home page esteja disponível
@@ -162,13 +177,14 @@ npm test -> (package.json)
 - Então verificar os campos obrigatórios no formulario com a opção 'Create Login Details' habilitada
 
 
+
 ### 🔹 Busca e Filtros
 
-**Cenário de busca de empregado por nome**
+**1. Cenário de busca de empregado por nome**
 
 **Pré requisitos**
-- aplicação disponível no ambiente de testes
-- Usuário Cadastrados Previamente
+- Aplicação deve estar disponível no ambiente de testes
+- Usuário cadastrado previamente
 
 **Cenário**
 - Dado que o admin home page esteja disponível
@@ -190,46 +206,52 @@ No cenário de Exclusão de Empregado, o Toast Mensage aparece duas vezes, um mo
 1. Login na aplicação
 2. Selecionar a opção PIM do Menu Lateral esquerdo
 3. Na opção EmployeeList, fazer uma pesquisa por um Empregado existente
-4. Clicar na ação de Exclusão ou pelo Checkbox ou botão de ação de remoção
+4. Clicar na ação de Exclusão pelo Checkbox ou botão de ação de remoção
 
 **Esperado:**  
-* A mensagem, "Remoção realizada com Sucesso", com toast com um texto mais adequado ou com um comportamento do componente diferente
+* Aparecer apenas um toast com a mensagem "Remoção com sucesso".
 
 **Atual:**
-* Aparece dois toast mensage um que fala que removeu com Sucesso e mediatamente outro que não tem ninguém na lista.
+* Aparece dois toast mensage, um que removeu com Sucesso e imediatamente outro que não tem ninguém na lista de empregados.
 
 ---
 
-### Bug 2: Validação de data futura
+### Bug 2: Habilitação do campo ID do Empregado
 
 **Descrição:**  
-Employee Id ser habilitado para alterações dado que o campo ID de usuário, por convenção é normalmente usado para identificar de maneira Única e Imutável um usuário
+O campo "Employee Id" atualmente está habilitado para alterações no momomento da criação e edição de um empregado. Por convenção, é normal identificar essa informação de maneira única e inalterada para cada usuário
 
-**Passos:**
+**Passos 1:**
 1. Login na aplicação
 2. Selecionar a opção PIM do Menu Lateral esquerdo
 3. Clicar na opção Add Employee
-4. Validar o Campo Employee Id
+4. Validar o campo Employee Id
+
+**Passos 2:**
+1. Login na aplicação
+2. Selecionar a opção PIM do Menu Lateral esquerdo
+3. pesquisar um empregado na opção EmployeeList
+4. com a ação editar realida, validar o campo Employee Id
 
 **Esperado:**  
-* Como o esperado que o Campo ID seja Sempre Único para o usuário, não haveria necessidade de haver alteração do mesmo e até mesmo esse campo ser apresentado, ficando disponível no banco de dados.
+* O Campo Employee ID deve sempre ser único e não editável para cada usuário, ficando apenas armazenado no banco de dados.
 
 **Atual:**  
-* O campo Employee Id não teria, a princípio, necessidade de estar disponível ao usuário para remoção, ficando disponível somente a informação em banco de dados.
+* O campo Employee Id é apresentado na tela de edição e criação de um empregado sendo possível alterar o campo de maneira livre.
 
 ---
 
 ## 🔧 Sugestões de Melhoria
 
-### 📌 Mudanças de Estilização durante o dia da aplicação
-- As constantes mudanças, ao logo do dia, nas cores da aplicação prejudicaram a legibilidade. Em alguns casos, a falta de contraste entre a cor do texto e os novos fundos (backgrounds) dificultou a visualização de botões e o entendimento das ações.
+### 📌 Mudanças de estilização durante o dia da aplicação
+- As constantes mudanças das cores principais da aplicação prejudicaram a legibilidade. Há casos, onde o contraste entre a cor do texto e os  backgrounds dificultaram a visualização de textos dos botões e o entendimento das ações.
 
 ### 📌 Tooltip Nas ações
-- Aplicação de Tooltips nas ações tanto de Edição como Remoção de empregados
+- Aplicação de Tooltips nas ações tanto de edição como remoção de empregados na lista de pesquisa.
 
-### 📌 Aplicação de conceitos de Narrador
-- Aplicação propriedade de leitura para que o narrador possa ler corretamente os campos e dar a informação correta.
+### 📌 Aplicação de conceitos de Leitores de tela
+- Aplicação de propriedades de leitura de tela que possa ler corretamente os campos e dar a informação correta.
 
 ## 📄 Considerações Finais
 
-O projeto de automação foi construída visando estabilidade e execução dos cenários propostos, bem como geração de relatório final do que foi executado e Screenshots/vídeos de possíveis cenários falhados(hooks.js)
+O projeto de automação foi construído visando estabilidade e execução dos cenários propostos, bem como geração de relatório final do que foi executado e Screenshots/vídeos de possíveis cenários falhados(hooks.js).
