@@ -19,7 +19,7 @@ class LoginActions {
     }
 
     async ValidarLoginSucesso() {
-        await expect(this.page).toHaveURL(/.*dashboard/, { timeout: 15000 });     
+        await expect(this.page).toHaveURL(/.*dashboard/, { timeout: 15000 }); //tempo bem a mais, contudo em alguns momentos do dia o carregamento da página demorava, e por isso um tempo maior foi necessário  
     }
 
     async ValidarAlertErro(){

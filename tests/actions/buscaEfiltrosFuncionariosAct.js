@@ -28,7 +28,7 @@ class BuscaEFiltrosFuncionariosActions {
 
     async ValidarRetornoPesquisa(){
         await this.page.waitForTimeout(2000);
-        const employee = await this.page.getByRole('row', { timeout: 15000 }).filter({ hasText: process.env.BASE_FIRST_NAME });
+        const employee = await this.page.getByRole('row', { timeout: 15000 }).filter({ hasText: process.env.BASE_FIRST_NAME }); //tempo bem a mais, contudo em alguns momentos do dia o carregamento da página demorava, e por isso um tempo maior foi necessário  
         const employeeCount = await employee.count();
         expect(employeeCount).toBeGreaterThanOrEqual(1);
     }
