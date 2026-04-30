@@ -193,7 +193,7 @@ npm test -> (package.json)
 
 ## 🐞 Bugs Encontrados
 
-### Bug 1: Ceário de Exclusão de Empregado
+### Bug 1: Cenário de Exclusão de Empregado
 
 **Descrição:** 
 No cenário de Exclusão de Empregado, o Toast Mensage aparece duas vezes, um mostrando que o usuário foi removido e outro que não existe itens na pesquisa.
