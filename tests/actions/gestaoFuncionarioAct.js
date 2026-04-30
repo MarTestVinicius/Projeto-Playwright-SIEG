@@ -28,6 +28,7 @@ class GestaoFuncionarioActions {
         await this.componentes.ToastMensagem('Successfully Saved');
     }
 
+    //Caso o campo Employee ID, no momento de criar um novo Empregado, não venha com valor único. Vai verificar o campo e adicionar +1 até ser um valor único
     async ValidarErroMensageCampoEmployeeID(){
     let erroExiste = await this.page.locator('span.oxd-input-field-error-message').isVisible();
 
